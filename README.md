@@ -6,7 +6,7 @@ Project 2: Feature Detection and Matching
 [Szeliski chapter 4.1](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf)
 
 
-## MISC Image Stuff
+## Misc Image Stuff
 
 ### Gaussian Kernel 
 
