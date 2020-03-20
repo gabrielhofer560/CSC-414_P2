@@ -29,8 +29,8 @@ Making the GitHub README look good:
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
 Ix2 should denote the second derivative of I with respect to x. Finally, Ixy denotes computing the derivative of Ix with respect to y.
 
-[Robert Collins, CSE-486, Penn State slides](http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf) - see last slide in list for helpful math explanation 
-[OpenCV Sobel Derivatives](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html)  
+[Robert Collins, CSE-486, Penn State slides](http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf) - see last slide in list for helpful math explanation   
+[OpenCV Sobel Derivatives](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html)   
 
 #### Algorithm 4.1 (page 214)
 
