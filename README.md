@@ -23,7 +23,7 @@ Making the GitHub README look good:
 
 #### Harris Corner Detection
 
-* [link 1](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners),
+* [link 1](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)
 * [link 2](https://aishack.in/tutorials/harris-corner-detector/)  
 
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
