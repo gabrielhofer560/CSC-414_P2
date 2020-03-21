@@ -4,10 +4,9 @@ Project 2: Feature Detection and Matching
 * [resource 1](https://cs.brown.edu/courses/csci1430/proj2/)  
 * [Szeliski chapter 4.1](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf)  
 
-#### Markdown Cheat-Sheet
+#### For the "aesthetic": 
 
-For the "aesthetic": 
-* [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [markdown cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 #### Gaussian Kernel 
 
@@ -19,7 +18,7 @@ For the "aesthetic":
 * [Bluring Masks vs Derivative Masks](https://www.tutorialspoint.com/dip/high_pass_vs_low_pass_filters.htm)  
 * [Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
 
-## Step 1: Feature Extraction (Szeliski 4.1.1)
+## Step 1: Feature Extraction - Szeliski 4.1.1
 
 #### Harris Corner Detection
 
@@ -43,7 +42,7 @@ Ix2 should denote the second derivative of I with respect to x. Finally, Ixy den
 point locations.
 
 
-## Step 2: Feature Description (Szeliski 4.1.2)
+## Step 2: Feature Description - Szeliski 4.1.2
 
 MOPS Feature Descriptors:
 * Szeliski, page 221  
