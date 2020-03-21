@@ -1,17 +1,17 @@
 # CSC-414_P2
 Project 2: Feature Detection and Matching
 
-[resource 1](https://cs.brown.edu/courses/csci1430/proj2/)  
-[Szeliski chapter 4.1](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf)  
+* [resource 1](https://cs.brown.edu/courses/csci1430/proj2/)  
+* [Szeliski chapter 4.1](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf)  
 
 #### Markdown Cheat-Sheet
 
-Making the GitHub README look good: 
-[markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+For the "aesthetic": 
+* [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 #### Gaussian Kernel 
 
-[gaussian kernel implementation](https://stackoverflow.com/questions/29731726/how-to-calculate-a-gaussian-kernel-matrix-efficiently-in-numpy)
+* [gaussian kernel implementation](https://stackoverflow.com/questions/29731726/how-to-calculate-a-gaussian-kernel-matrix-efficiently-in-numpy)
 
 #### Laplacian Kernel
 
@@ -23,8 +23,8 @@ Making the GitHub README look good:
 
 #### Harris Corner Detection
 
-* [link 1](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)
-* [link 2](https://aishack.in/tutorials/harris-corner-detector/)  
+* [py_features_harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)
+* [harris-corner-detector](https://aishack.in/tutorials/harris-corner-detector/)  
 
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
 Ix2 should denote the second derivative of I with respect to x. Finally, Ixy denotes computing the derivative of Ix with respect to y.
