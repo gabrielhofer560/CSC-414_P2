@@ -15,22 +15,22 @@ Making the GitHub README look good:
 
 #### Laplacian Kernel
 
-[Laplacian of Gaussian](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)  
-[Bluring Masks vs Derivative Masks](https://www.tutorialspoint.com/dip/high_pass_vs_low_pass_filters.htm)  
-[Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
+* [Laplacian of Gaussian](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)  
+* [Bluring Masks vs Derivative Masks](https://www.tutorialspoint.com/dip/high_pass_vs_low_pass_filters.htm)  
+* [Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
 
 ## Step 1: Feature Extraction
 
 #### Harris Corner Detection
 
-[link 1](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners),
-[link 2](https://aishack.in/tutorials/harris-corner-detector/)  
+* [link 1](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners),
+* [link 2](https://aishack.in/tutorials/harris-corner-detector/)  
 
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
 Ix2 should denote the second derivative of I with respect to x. Finally, Ixy denotes computing the derivative of Ix with respect to y.
 
-[Robert Collins, CSE-486, Penn State slides](http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf) - see last slide in list for helpful math explanation   
-[OpenCV Sobel Derivatives](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html)   
+* [Robert Collins, CSE-486, Penn State slides](http://www.cse.psu.edu/~rtc12/CSE486/lecture06.pdf) - see last slide in list for helpful math explanation   
+* [OpenCV Sobel Derivatives](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html)   
 
 #### Algorithm 4.1 (page 214)
 
@@ -42,11 +42,12 @@ Ix2 should denote the second derivative of I with respect to x. Finally, Ixy den
 5. Find local maxima above a certain threshold and report them as detected feature
 point locations.
 
-## Step 2: Feature Description
+## Step 2: Feature Description (Szeliski 4.1.2)
 
-See 4.1.2 for feature descriptors and such...
-
-[slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf)
+MOPS Feature Descriptors:
+* Szeliski, page 221  
+* [Kuan-Hui Lee](https://courses.cs.washington.edu/courses/cse576/13sp/projects/project1/artifacts/ykhlee/Report.htm)  
+* [slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf)
 
 ## Step 3: Feature Matching
 
