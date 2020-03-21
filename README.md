@@ -1,19 +1,15 @@
 # CSC-414_P2
 Project 2: Feature Detection and Matching
-
 * [resource 1](https://cs.brown.edu/courses/csci1430/proj2/)  
 * [Szeliski chapter 4.1](http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf)  
 
 #### For the "aesthetic": 
-
 * [markdown cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 #### Gaussian Kernel 
-
 * [gaussian kernel implementation](https://stackoverflow.com/questions/29731726/how-to-calculate-a-gaussian-kernel-matrix-efficiently-in-numpy)
 
 #### Laplacian Kernel
-
 * [Laplacian of Gaussian](https://homepages.inf.ed.ac.uk/rbf/HIPR2/log.htm)  
 * [Bluring Masks vs Derivative Masks](https://www.tutorialspoint.com/dip/high_pass_vs_low_pass_filters.htm)  
 * [Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
@@ -21,7 +17,6 @@ Project 2: Feature Detection and Matching
 ## Step 1: Feature Extraction - Szeliski 4.1.1
 
 #### Harris Corner Detection
-
 * [py_features_harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)
 * [harris-corner-detector](https://aishack.in/tutorials/harris-corner-detector/)  
 
@@ -32,7 +27,6 @@ Ix2 should denote the second derivative of I with respect to x. Finally, Ixy den
 * [OpenCV Sobel Derivatives](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html)   
 
 #### Algorithm 4.1 (page 214)
-
 1. Compute the horizontal and vertical derivatives of the image Ix and Iy by convolving the original image with derivatives of Gaussians (Section 3.2.3).
 2. Compute the three images corresponding to the outer products of these gradients.
 (The matrix A is symmetric, so only three entries are needed.)
@@ -50,5 +44,13 @@ MOPS Feature Descriptors:
 * [slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf)
 
 ## Step 3: Feature Matching
+
+#### SIFT
+[SIFT tutorial](https://aishack.in/tutorials/implementing-sift-opencv/)
+
+
+
+
+
 
 
