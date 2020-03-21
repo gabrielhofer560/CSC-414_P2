@@ -19,7 +19,7 @@ Making the GitHub README look good:
 * [Bluring Masks vs Derivative Masks](https://www.tutorialspoint.com/dip/high_pass_vs_low_pass_filters.htm)  
 * [Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
 
-## Step 1: Feature Extraction
+## Step 1: Feature Extraction (Szeliski 4.1.1)
 
 #### Harris Corner Detection
 
@@ -41,6 +41,7 @@ Ix2 should denote the second derivative of I with respect to x. Finally, Ixy den
 4. Compute a scalar interest measure using one of the formulas discussed above
 5. Find local maxima above a certain threshold and report them as detected feature
 point locations.
+
 
 ## Step 2: Feature Description (Szeliski 4.1.2)
 
