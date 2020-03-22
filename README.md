@@ -15,9 +15,8 @@ Project 2: Feature Detection and Matching
 * [Tutorialspoint Laplacian Operator](https://www.tutorialspoint.com/dip/laplacian_operator.htm)  
 
 ## Step 1: Feature Extraction - Szeliski 4.1.1
-
 #### Harris Corner Detection
-* [py_features_harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)
+* [py_features_harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners) - VERY HELPFUL
 * [harris-corner-detector](https://aishack.in/tutorials/harris-corner-detector/)  
 
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
@@ -35,18 +34,30 @@ Ix2 should denote the second derivative of I with respect to x. Finally, Ixy den
 5. Find local maxima above a certain threshold and report them as detected feature
 point locations.
 
+#### marking features on an image (with red dots)
+[marking](https://stackoverflow.com/questions/49799057/how-to-draw-a-point-in-an-image-using-given-co-ordinate-with-python-opencv)
+
+#### FAST Feature Detector
+[FAST](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_fast/py_fast.html#fast)
 
 ## Step 2: Feature Description - Szeliski 4.1.2
-
 MOPS Feature Descriptors:
 * Szeliski, page 221  
 * [Kuan-Hui Lee](https://courses.cs.washington.edu/courses/cse576/13sp/projects/project1/artifacts/ykhlee/Report.htm)  
 * [slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf)
 
 ## Step 3: Feature Matching
-
 #### SIFT
 [SIFT tutorial](https://aishack.in/tutorials/implementing-sift-opencv/)
+
+
+## random links and unanswered questions
+[making a histogram from image gradient explanation](https://lilianweng.github.io/lil-log/2017/10/29/object-recognition-for-dummies-part-1.html)
+
+What is a structure tensor?  
+[structure tensor](https://en.wikipedia.org/wiki/Structure_tensor)  
+[how it's used](https://en.wikipedia.org/wiki/Corner_detection#The_Harris_&_Stephens_/_Shi%E2%80%93Tomasi_corner_detection_algorithms)
+[histogram of oriented gradients](https://www.learnopencv.com/histogram-of-oriented-gradients/)
 
 
 

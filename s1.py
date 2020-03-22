@@ -41,7 +41,16 @@ def extractFeatures(img):
     for y in range(c):
        
 
-  # create thresholding function for cornerj c(H)
+  # create thresholding function for corner c(H)
   
+
+
+
+
+
+
+
+
+
 
 
