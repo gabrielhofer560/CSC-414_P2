@@ -31,7 +31,7 @@ def cornerHarris(img,kernel,n):
                 for j in range(n):
                     H += w[i][j] * img[x+i:x+i+n][y+j:x+j+n]
 
-            R = np.linalg.det(H) / np.trace(H)
+            R = np.linalg.det(H) - k*(np.trace(H)**2)
 
             # use R to determine significance of point...?
 
