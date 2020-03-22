@@ -16,8 +16,9 @@ Project 2: Feature Detection and Matching
 
 ## Step 1: Feature Extraction - Szeliski 4.1.1
 #### Harris Corner Detection
-* [py_features_harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners) - VERY HELPFUL
-* [harris-corner-detector](https://aishack.in/tutorials/harris-corner-detector/)  
+* [harris corner detection algorithm](https://en.wikipedia.org/wiki/Harris_Corner_Detector#Process_of_Harris_Corner_Detection_Algorithm[4][5][6])  
+* [haishack.in](https://aishack.in/tutorials/harris-corner-detector/)  
+* [py features harris](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_features_harris/py_features_harris.html#harris-corners)  
 
 Use Sobel filter/operator to calculate Ix and Iy. (Note that here, Ix is the first derivative of I with respect to x. Also, 
 Ix2 should denote the second derivative of I with respect to x. Finally, Ixy denotes computing the derivative of Ix with respect to y.
@@ -58,7 +59,6 @@ What is a structure tensor?
 [structure tensor](https://en.wikipedia.org/wiki/Structure_tensor)  
 [how it's used](https://en.wikipedia.org/wiki/Corner_detection#The_Harris_&_Stephens_/_Shi%E2%80%93Tomasi_corner_detection_algorithms)
 [histogram of oriented gradients](https://www.learnopencv.com/histogram-of-oriented-gradients/)
-
 
 
 
