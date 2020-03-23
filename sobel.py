@@ -1,10 +1,10 @@
 # sobel kernels
-global xsobel = [
+xsobel = [
     [1,0,-1],
     [2,0,-2],
     [1,0,-1]]
 
-global ysobel = [
+ysobel = [
     [1,2,1],
     [0,0,0],
     [-1,-2,-1]]

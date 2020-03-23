@@ -1,51 +1,32 @@
 """
 Harris Corner Detection algorithm
-------------------------------------------
-param img: image, numpy array
-param kernel: square guassian matrix, w
-param n: size of kernel
+:param img: image, numpy array
+:param kernel: square guassian matrix, w
+:param n: size of kernel
+:returns: void
 """
 import numpy as np
 
 def cornerHarris(img,kernel,n):
-    # get img's shape and dimensions
+    x = conv(img,xsobel)
+    y = conv(img,ysobel)
 
-    # create sobel derivatives Ixy, Iyx, Ix2, Iy2
-    Ix = imfilter(img,xsobel)
-    Iy = imfilter(img,ysobel)
+    g = gauss(n)
+    xx = x*x
+    yy = y*y
+    xy = y*x
 
-    Iy2 = imfilter(Iy,ysobel)
-    Ix2 = imfilter(Ix,xsobel)
+    r,c = img.shape
+    for i in range(r-n):
+        for j in range(c-n):
+            sxx = xx[i:i+n, j:j+n].sum()
+            syy = yy[i:i+n, j:j+n].sum()
+            sxy = xy[i:i+n, j:j+n].sum()
 
-    Ixy = imfilter(Ix,ysobel)
-    Iyx = imfilter(Iy,xsobel)
-    
-    # create w (gaussian mask) by calling gauss from gauss.py 
-    w = gauss(n,n,1)
-    
-    # calculate H 
-    for x in range(r-n):
-        for y in range(c-n):
-            H = np.zeros((n,n)) 
-            for i in range(n):
-                for j in range(n):
-                    H += w[i][j] * img[x+i:x+i+n][y+j:x+j+n]
+            d = (sxx*syy) - (sxy*sxy) 
+            t = sxx+syy
+            r = det - k * (t*t)
 
-            R = np.linalg.det(H) - k*(np.trace(H)**2)
-
-            # use R to determine significance of point...?
-
-
-
-    # create thresholding function for corner c(H)
-  
-
-
-
-
-
-
-
-
-
+            if r > th: 
+                # do something
 
