@@ -61,7 +61,7 @@ What is a structure tensor?
 [histogram of oriented gradients](https://www.learnopencv.com/histogram-of-oriented-gradients/)
 
 #### I wish I would have seen this way sooooner.
-[sweet](https://muthu.co/harris-corner-detector-implementation-in-python/)  
+*** [sweet](https://muthu.co/harris-corner-detector-implementation-in-python/)  ***
 [sweet](https://github.com/hughesj919/HarrisCorner)  
 [sweet](http://www.kaij.org/blog/?p=89)  
 [sweet](https://sandipanweb.wordpress.com/2017/10/22/feature-detection-with-harris-corner-detector-and-matching-images-with-feature-descriptors-in-python/)
