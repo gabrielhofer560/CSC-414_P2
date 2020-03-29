@@ -1,3 +1,6 @@
+import numpy as np
+from scipy import stats as st
+
 """ source: https://stackoverflow.com/questions/29731726/how-to-calculate-a-gaussian-kernel-matrix-efficiently-in-numpy """
 def gkern(kernlen=21, nsig=3):
     x = np.linspace(-nsig, nsig, kernlen+1)

@@ -45,7 +45,11 @@ point locations.
 MOPS Feature Descriptors:
 * Szeliski, page 221  
 * [Kuan-Hui Lee](https://courses.cs.washington.edu/courses/cse576/13sp/projects/project1/artifacts/ykhlee/Report.htm)  
-* [slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf)
+* !!! [slides](https://courses.cs.washington.edu/courses/cse455/09wi/Lects/lect6.pdf) !!!  
+
+We want scale invariance and rotation invariance...
+use MOPS for rotation invariance.
+
 
 ## Step 3: Feature Matching
 #### SIFT
