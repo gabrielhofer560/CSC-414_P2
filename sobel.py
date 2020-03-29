@@ -1,4 +1,4 @@
-# sobel kernels
+# sobel/derivative kernels
 xsobel = [
     [1,0,-1],
     [2,0,-2],

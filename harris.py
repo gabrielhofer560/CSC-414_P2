@@ -3,7 +3,7 @@ Harris Corner Detection algorithm
 :param img: image, numpy array
 :param kernel: square guassian matrix, w
 :param n: size of kernel
-:k: 
+:k: ...
 :th: threshold
 :returns: void
 """
@@ -32,6 +32,8 @@ def cornerHarris(img,kernel,n,k,th):
             if r > th: 
 
                 # do something
+				# set pixel to RED
+
 
 
 
