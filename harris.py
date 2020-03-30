@@ -23,11 +23,8 @@ ysobel = np.array([
     [-1,-2,-1]])
 
 def harris(img,g,n,th):
-    #    x = imfilter(img,xsobel)
-    #    y = imfilter(img,ysobel)
     x = ss.convolve2d(img,xsobel)
     y = ss.convolve2d(img,ysobel)    
-    #return x, y
 
     xx = x*x
     yy = y*y

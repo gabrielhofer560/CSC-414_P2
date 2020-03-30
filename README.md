@@ -64,13 +64,35 @@ What is a structure tensor?
 [how it's used](https://en.wikipedia.org/wiki/Corner_detection#The_Harris_&_Stephens_/_Shi%E2%80%93Tomasi_corner_detection_algorithms)
 [histogram of oriented gradients](https://www.learnopencv.com/histogram-of-oriented-gradients/)
 
-#### I wish I would have seen this way sooooner.
-*** [sweet](https://muthu.co/harris-corner-detector-implementation-in-python/)  ***  
+#### should see this 
+[sweet](https://muthu.co/harris-corner-detector-implementation-in-python/)  
 [sweet](https://github.com/hughesj919/HarrisCorner)  
 [sweet](http://www.kaij.org/blog/?p=89)  
 [sweet](https://sandipanweb.wordpress.com/2017/10/22/feature-detection-with-harris-corner-detector-and-matching-images-with-feature-descriptors-in-python/)
 
+#### GA Tech Project pages
 
+use images in this page for testing harris corner detection
+[list of students' pages](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/)  
+
+##### code
+
+[code](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/hdu35/index.html)  
+
+[good expalnation of histogram and orientation](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/kshah84/index.html)  
+[](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mavidano3/index.html)  
+
+[four descriptor code](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/ctam8/index.html)  
+[five](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mjung43/index.html)  
+[six](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/rborowicz3/index.html)  
+[seven](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mnatraj3/index.html)  
+
+
+##### more
+
+[one](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/agartia3/index.html)
+[two (code)](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/agudimella3/index.html)
+[three (images)](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/akachhara3/index.html)
 
 
 
