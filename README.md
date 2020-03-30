@@ -75,12 +75,11 @@ What is a structure tensor?
 use images in this page for testing harris corner detection
 [list of students' pages](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/)  
 
-
 [hdu35](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/hdu35/index.html)  
-[kshah84 -> good expalnation of histogram and orientation](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/kshah84/index.html)  
+[kshah84 --> good expalnation of histogram and orientation](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/kshah84/index.html)  
 [mavidano3](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mavidano3/index.html)  
 
-[ctam8 -> descriptor code](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/ctam8/index.html)  
+[ctam8 --> descriptor code](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/ctam8/index.html)  
 [mjung43](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mjung43/index.html)  
 [rborowicz3](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/rborowicz3/index.html)  
 [mnatraj3](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/mnatraj3/index.html)  
@@ -89,6 +88,18 @@ use images in this page for testing harris corner detection
 [agudimella3 - code](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/agudimella3/index.html)  
 [akachara3 - images](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/akachhara3/index.html)  
 
+
+## SIFT: Scale Invariant Feature Transform
+[explaning SIFT](https://www.cse.iitb.ac.in/~ajitvr/CS763/SIFT.pdf)  
+[another explanation](https://towardsdatascience.com/sift-scale-invariant-feature-transform-c7233dc60f37)  
+
+
+##### Assigning Orientations
+iterate through each keypoint  
+
+for each keypoint, do the following
+
+create a 16 by 16 grid/2d array
 
 
 
