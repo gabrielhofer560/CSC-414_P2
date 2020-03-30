@@ -92,7 +92,7 @@ use images in this page for testing harris corner detection
 ## SIFT: Scale Invariant Feature Transform
 [explaning SIFT](https://www.cse.iitb.ac.in/~ajitvr/CS763/SIFT.pdf)  
 [another explanation](https://towardsdatascience.com/sift-scale-invariant-feature-transform-c7233dc60f37)  
-
+[orientation and magnitude formulas](https://www.cse.iitb.ac.in/~ajitvr/CS763/SIFT.pdf)
 
 ##### Assigning Orientations
 iterate through each keypoint  
@@ -100,7 +100,6 @@ iterate through each keypoint
 for each keypoint, do the following
 
 create a 16 by 16 grid/2d array
-
 
 
 

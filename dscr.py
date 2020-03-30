@@ -19,31 +19,43 @@ are welcome to use techniques described in lecture (e.g., detecting dominant ori
 using image pyramids), or come up with your own ideas.
 """
 
-
-
 """
 returns histogram?
 """
 def makeH(window):
     H=np.zeros(8)
-    return H
-
+    for i in range(1,5):
+        for j in range(1,5):
+            m = math.sqrt((W[i+1,j]-W[i-1,j])**2 + (W[i,j+1]-W[i,j-1])**2)
+            theta = atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
+            # put stuff in bins
+            norm = theta*8/360
+            H[norm] += m
+    # find max bin 
+    m=0
+    theta=-1
+    for i in range(8):
+        if H[i] > mx: 
+            m=b
+            theta=i
+    return [m,theta]
 
 """
-sift feature desciptor
+Sift Feature Desciptor
+makes HOG: Histogram of Oriented Gradients
 :param feat - list of interest points a.k.a. keypoints
 :returns something...
 """
 def sift(img,feat):
-    # make HOG: histogram of oriented gradients
+    L=gk(img.shape[0],img.shape[1],1)*img
     for i in feat:
-        # 16x16 window of 16 4x4 sub-windows
         r,c=i[0],i[1]
         A=np.zeros((4,4))
         for j in range(4):
             for k in range(4):
-                A[j,k]=makeH([(img[r-8+(j*4):r-4+(j*4),c-8+(k*4):c-4+(k*4)]))
-        
+                A[j,k]=makeH((L[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)]))
+    B=np.zeros(8)
+    for i in A:
 
 
 
