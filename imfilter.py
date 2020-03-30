@@ -34,7 +34,7 @@ def imfilter2(A,kernel):
 
 def imfilter(A,kernel): 
   if kernel.shape[0]%2==0 or kernel.shape[1]%2==0 : 
-    print("Error: Invalid kernel dimensions. Quitting...")
+    ifprint("Error: Invalid kernel dimensions. Quitting...")
     return A
   if(len(A.shape)==2): 
     imfilter2(A,kernel)

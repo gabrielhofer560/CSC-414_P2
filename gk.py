@@ -1,6 +1,6 @@
 import numpy as np
 import math
-def gkern(r,c,s):
+def gk(r,c,s):
 	arr=np.zeros((r,c))
 	for i in range(r):
 		for j in range(c):

@@ -1,41 +1,62 @@
 """
 Harris Corner Detection algorithm
 :param img: image, numpy array
-:param kernel: square guassian matrix, w
+:param g: square guassian matrix, w
 :param n: size of kernel
 :k: ...
 :th: threshold
 :returns: void
 """
 import numpy as np
+from imfilter import imfilter
+import scipy.signal as ss
 
-def cornerHarris(img,kernel,n,k,th):
-    x = conv(img,xsobel)
-    y = conv(img,ysobel)
 
-    g = gauss(n)
+xsobel = np.array([
+    [1,0,-1],
+    [2,0,-2],
+    [1,0,-1]])
+
+ysobel = np.array([
+    [1,2,1],
+    [0,0,0],
+    [-1,-2,-1]])
+
+def harris(img,g,n,th):
+    #    x = imfilter(img,xsobel)
+    #    y = imfilter(img,ysobel)
+    x = ss.convolve2d(img,xsobel)
+    y = ss.convolve2d(img,ysobel)    
+    #return x, y
+
     xx = x*x
     yy = y*y
-    xy = y*x
-
-    r,c = img.shape
+    xy = x*y
+    
+    r,c = img.shape[0],img.shape[1]
+    avgR=0
+    R=125
     for i in range(r-n):
         for j in range(c-n):
             sxx = (g * xx[i:i+n, j:j+n]).sum()
             syy = (g * yy[i:i+n, j:j+n]).sum()
             sxy = (g * xy[i:i+n, j:j+n]).sum()
-
+            
             d = (sxx*syy)-(sxy*sxy) 
             t = sxx+syy
-            r = det-k*(t*t)
 
-            if r > th: 
+            if t!=0:
+                R = d/t
+            avgR+=R
+            
+            if R > 0.005: 
+                img[i,j]=0
+                # set pixel to RED
+                # img[i,j,:]=[0,0,255]
 
-                # do something
-				# set pixel to RED
-
-
-
+    avgR /= r*c
+    print("average r: "+str(avgR))
+    return img
 
 
 
