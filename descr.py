@@ -20,15 +20,30 @@ using image pyramids), or come up with your own ideas.
 """
 
 
+
 """
-simple 5x5 window
+returns histogram?
 """
-def windowDescriptor():
+def makeH(window):
+    H=np.zeros(8)
+    return H
 
 
 """
-Find orientation of descriptor
+sift feature desciptor
+:param feat - list of interest points a.k.a. keypoints
+:returns something...
 """
+def sift(img,feat):
+    # make HOG: histogram of oriented gradients
+    for i in feat:
+        # 16x16 window of 16 4x4 sub-windows
+        r,c=i[0],i[1]
+        A=np.zeros((4,4))
+        for j in range(4):
+            for k in range(4):
+                A[j,k]=makeH([(img[r-8+(j*4):r-4+(j*4),c-8+(k*4):c-4+(k*4)]))
+        
 
 
 

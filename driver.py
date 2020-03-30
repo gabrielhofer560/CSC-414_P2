@@ -15,21 +15,18 @@ from skimage import io
 from skimage.color import rgb2gray
 
 
-
 img = io.imread(sys.argv[1]);
+cpy = img
 img = rgb2gray(img)
-io.imshow(img)
-io.show()
-# io.imsave("out.png",img)
 
-print(img.shape)
-k = gk(3,3,1)
-#img = harris(img,k,3,200)
-img = harris(img,k,3,0.003)
-io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
-io.show()
+feat = harris(img,gk(3,3,1),0.4)
+print(len(feat))
+showFeatures(cpy,feat)
 
 
+#io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
+#io.show()
+#io.imsave("out.png",img)
 
 
 
