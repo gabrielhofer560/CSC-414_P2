@@ -25,9 +25,12 @@ print("number of features: "+str(len(feat)))
 
 from dscr import printH, makeH, sift
 D = sift(gry,feat)
+print("\t\tTYPE OF D: "+str(type()))
+
+
 
 for i in range(20):
-    print(str(i[0])+"  "+str(i[1]))
+    print("i: "+str(i)+" "+str(D[i,0])+"  "+str(D[i,1]))
 
 # showFeatures2()
 
