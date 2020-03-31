@@ -1,5 +1,7 @@
 """
-Step 1: Feature Extraction
+Author: Gabriel Hofer
+Course: CSC-414
+Instructor: Dr. Randy Hoover
 """
 """
 https://stackoverflow.com/questions/12201577/how-can-i-convert-an-rgb-image-into-grayscale-in-python

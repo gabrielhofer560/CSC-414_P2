@@ -29,7 +29,7 @@ def makeH(window):
             m = math.sqrt((W[i+1,j]-W[i-1,j])**2 + (W[i,j+1]-W[i,j-1])**2)
             theta = atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
             # put stuff in bins
-            norm = theta*8/360
+            norm = (theta+math.pi/2)*8/math.pi
             H[norm] += m
     # find max bin 
     m=0
@@ -47,15 +47,17 @@ makes HOG: Histogram of Oriented Gradients
 :returns something...
 """
 def sift(img,feat):
-    L=gk(img.shape[0],img.shape[1],1)*img
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4))
+        L=gk(6,6,1)*img[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)]
         for j in range(4):
             for k in range(4):
                 A[j,k]=makeH((L[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)]))
     B=np.zeros(8)
-    for i in A:
+    for i in range(4):
+        for j in range(4):
+
 
 
 
