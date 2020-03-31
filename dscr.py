@@ -11,6 +11,7 @@ import math
 
 def printH(H):
     for i in H: print(str(i)+' ',end='')
+    print()
 
 def makeH(W):
     H=np.zeros(8)
@@ -20,7 +21,7 @@ def makeH(W):
             if W[i,j+1] != W[i,j-1] : 
                 theta = math.atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
             else: continue
-            norm=math.floor((theta+math.pi/2)*8/math.pi)%8
+            norm=int(math.floor((theta+math.pi/2)*8/math.pi)%8)
             H[norm]+=m
     m=0
     theta=-1
@@ -28,8 +29,8 @@ def makeH(W):
         if j>m:
             m=j
             theta=i
-    printH(H)
-
+    #printH(H)
+    print("theta: "+str(theta))
     return [theta,m]
 
 """
@@ -39,7 +40,7 @@ makes HOG: Histogram of Oriented Gradients
 :returns 
 """
 def sift(img,feat):
-    dscr=[]
+    sift=[]
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4,2)) 
@@ -59,8 +60,8 @@ def sift(img,feat):
             if j>m:
                 m=j
                 theta=i
-        dscr.append([theta,m])
-
+        sift.append([theta,m])
+    return sift
 
 
 
