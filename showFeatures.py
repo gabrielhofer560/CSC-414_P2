@@ -11,10 +11,10 @@ import numpy as np
 
 def showFeatures(img,loc,D):
     for i in loc:
-        for j in range(-7,7):
-            img[i[0]-j,i[1]+7,:]=[255,0,0]
+        for j in range(-7,8):
+            img[i[0]+j,i[1]+8,:]=[255,0,0]
             img[i[0]+j,i[1]-7,:]=[255,0,0]
-            img[i[0]+7,i[1]-j,:]=[255,0,0]
+            img[i[0]+8,i[1]+j,:]=[255,0,0]
             img[i[0]-7,i[1]+j,:]=[255,0,0]
 
 #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
