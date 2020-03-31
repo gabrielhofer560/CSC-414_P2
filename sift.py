@@ -18,7 +18,7 @@ def makeH(W):
     for i in range(1,5):
         for j in range(1,5):
             m = math.sqrt((W[i+1,j]-W[i-1,j])**2 + (W[i,j+1]-W[i,j-1])**2)
-            if W[i,j+1] != W[i,j-1] : 
+            if W[i,j+1] != W[i,j-1] and W[i+1,j] != W[i-1,j]: 
                 theta = math.atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
             else: continue
             norm=int(math.floor((theta+math.pi/2)*8/math.pi)%8)
@@ -30,7 +30,7 @@ def makeH(W):
             m=j
             theta=i
     #printH(H)
-    print("theta: "+str(theta))
+    #print("theta: "+str(theta))
     return [theta,m]
 
 """

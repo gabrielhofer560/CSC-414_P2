@@ -9,15 +9,12 @@ from skimage import io
 import cv2
 import numpy as np
 
-def showFeatures(img,loc,D):
-    for i in loc:
-        for j in range(-7,7):
-            img[i[0]-j,i[1]+7,:]=[255,0,0]
-            img[i[0]+j,i[1]-7,:]=[255,0,0]
-            img[i[0]+7,i[1]-j,:]=[255,0,0]
-            img[i[0]-7,i[1]+j,:]=[255,0,0]
 
-#io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
+def showDots(img,feat):
+    for i in feat:
+        img[i[0],i[1],:]=[255,0,0]
+    #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
     io.imshow(img,vmin=0,vmax=255)
     io.show()
     
+
