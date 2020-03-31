@@ -22,23 +22,26 @@ using image pyramids), or come up with your own ideas.
 """
 returns histogram?
 """
+import numpy as np
+from gk import gk
+import math
+
 
 def printH(H):
     for i in H: print(str(i)+' ',end='')
 
-
-def makeH(window):
+def makeH(W):
     H=np.zeros(8)
     for i in range(1,5):
         for j in range(1,5):
             m = math.sqrt((W[i+1,j]-W[i-1,j])**2 + (W[i,j+1]-W[i,j-1])**2)
-            theta = atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
-            norm=(theta+math.pi/2)*8/math.pi
+            theta = math.atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
+            norm=math.floor((theta+math.pi/2)*8/math.pi)
             H[norm]+=m
     m=0
     theta=-1
     for i,j in enumerate(H):
-        if j>mx:
+        if j>m:
             m=j
             theta=i
 
@@ -54,12 +57,32 @@ makes HOG: Histogram of Oriented Gradients
 """
 def sift(img,feat):
     dscr=[]
+    print("THIS IS SIFT!")
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4,2)) 
+        # let's avoid the margins 
+        if r<9 or r>img.shape[0]-9 or c<8 or c>img.shape[1]-9:
+            continue
+        print(i)
+
         for j in range(4):
             for k in range(4):
-                A[j,k]=makeH((gk(6,6,1)*img[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)]))
+                print(gk(6,6,1).shape)
+                print(img[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)].shape)
+
+                print("r1: "+str(r-9+(j*4)))
+                print("r2: "+str(r-3+(j*4)))
+
+                print("c1: "+str(c-9+(k*4)))
+                print("c2: "+str(c-3+(k*4)))
+                
+                print(img.shape)
+
+                #A[j,k]=makeH(gk(6,6,1)*img[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)])
+                print("\n----------------------------------------------")
+        print("here")
+
         B=np.zeros(8)
         for j in range(4):
             for k in range(4):
@@ -67,7 +90,7 @@ def sift(img,feat):
         m=0
         theta=-1
         for i,j in enumerate(B):
-            if j>mx:
+            if j>m:
                 m=j
                 theta=i
         dscr.append([m,theta])

@@ -6,7 +6,6 @@ Harris Corner Detection algorithm
 :returns: list of pairs. each pair is coordinates of an interst point, (x,y)
 """
 import numpy as np
-from imfilter import imfilter
 import scipy.signal as ss
 
 xsobel = np.array([

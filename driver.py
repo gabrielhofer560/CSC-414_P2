@@ -3,7 +3,6 @@ Author: Gabriel Hofer
 Course: CSC-414
 Instructor: Dr. Randy Hoover
 """
-from imfilter import imfilter
 from gk import gk
 from harris import harris
 from showFeatures import showFeatures
@@ -17,26 +16,27 @@ img = io.imread(sys.argv[1]);
 cpy = img
 gry = rgb2gray(img)
 
+
+
+
 feat = harris(gry,gk(3,3,1),0.4)
 print("number of features: "+str(len(feat)))
-showFeatures(img,feat)
+#showFeatures(img,feat)
 
+from dscr import printH, makeH, sift
+D = sift(gry,feat)
 
-
-import dscr
-
-D = sift(img,feat)
+for i in range(20):
+    print(str(i[0])+"  "+str(i[1]))
 
 # showFeatures2()
-
-
-
-
-
 
 #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
 #io.show()
 #io.imsave("out.png",img)
+
+
+
 
 
 
