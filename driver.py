@@ -21,7 +21,7 @@ gry = rgb2gray(img)
 
 
 
-loc = harris(gry,gk(3,3,1),0.03)
+loc = harris(gry,gk(3,3,1),0.1)
 print("number of features: "+str(len(loc)))
 showDots(img,loc)
 

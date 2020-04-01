@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \begin{document}
 \begin{titlepage}
    \begin{center}
@@ -37,6 +38,35 @@
 % can write this in latex - just an example
 % \includegraphics[scale=0.5]{sift-orientation-eqns.jpg}
 
+\textbf{Introduction}\\ 
+
+
+
+
+\textbf{Step 1}\\ 
+Harris Corner Detection
+
+
+
+Harris Matrix
+
+
+
+magnitude and orientation
+\small
+\[
+    m(x,y) = \sqrt{(L(x+1,y)-L(x-1,y))^2+(L(x,y+1)-L(x,y-1))^2}
+\]
+\[
+    \theta (x,y) = \arctan{(L(x,y+1)-L(x,y-1))/(L(x+1,y)-L(x-1,y))}
+\]
+How to create bins:
+
+save images of showFeature -- and then put them here in the writeup
+
+\textbf{Step 2: Descriptors}\\
+
+\textbf{Step 3: Feature Matching}\\
 
 
 

@@ -100,8 +100,8 @@ iterate through each keypoint
 for each keypoint, do the following
 
 create a 16 by 16 grid/2d array
-
-
+[more](https://ai.stanford.edu/~syyeung/cvweb/tutorial2.html)  
+[feature matching](https://www.cc.gatech.edu/classes/AY2016/cs4476_fall/results/proj2/html/alieberman3/)
 
 
 

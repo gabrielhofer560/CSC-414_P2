@@ -19,9 +19,9 @@ def makeH(W):
         for j in range(1,5):
             m = math.sqrt((W[i+1,j]-W[i-1,j])**2 + (W[i,j+1]-W[i,j-1])**2)
             if W[i,j+1] != W[i,j-1] and W[i+1,j] != W[i-1,j]: 
-                theta = math.atan((W[i,j+1]-W[i,j-1]) / (W[i+1,j]-W[i-1,j]))
+                theta = math.atan2((W[i+1,j]-W[i-1,j]), (W[i,j+1]-W[i,j-1]))
             else: continue
-            norm=int(math.floor((theta+math.pi/2)*8/math.pi)%8)
+            norm=int(math.floor((theta+math.pi)*8/(2*math.pi))%8)
             H[norm]+=m
     m=0
     theta=-1
@@ -29,8 +29,6 @@ def makeH(W):
         if j>m:
             m=j
             theta=i
-    #printH(H)
-    #print("theta: "+str(theta))
     return [theta,m]
 
 """
@@ -44,7 +42,6 @@ def sift(img,feat):
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4,2)) 
-        # let's avoid the margins 
         if r<9 or r>img.shape[0]-9 or c<8 or c>img.shape[1]-9:
             continue
         for j in range(4):
