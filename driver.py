@@ -14,27 +14,18 @@ from skimage.color import rgb2gray
 from showFeatures import showFeatures
 from sift import printH, makeH, sift
 
-
+# read image, convert to gray
 img = io.imread(sys.argv[1]);
 cpy = img
 gry = rgb2gray(img)
 
-
-
+# get list of locations of interest points
 loc = harris(gry,gk(3,3,1),0.1)
 print("number of features: "+str(len(loc)))
-showDots(img,loc)
 
-#exit()
-
+# make sift descriptors
 D = sift(gry,loc)
-
-#for i in range(20):
-#    print("i: "+str(i)+" = "+str(D[i][0])+"  "+str(D[i][1]))
-
 showFeatures(img,loc,D)
-
-
 
 
 #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")

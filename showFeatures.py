@@ -60,11 +60,6 @@ def showFeatures(img,loc,D):
 
 
 
-
-
-
-
-
 #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
     io.imshow(img,vmin=0,vmax=255)
     io.show()
