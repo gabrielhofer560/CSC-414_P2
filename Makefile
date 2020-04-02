@@ -4,3 +4,6 @@ all:
 	@evince main.pdf & 
 	@rm main.log main.aux
 
+
+
+

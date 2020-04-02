@@ -61,7 +61,7 @@ def sift(img,feat):
             if j>m:
                 m=j
                 theta=i
-        sift.append([theta,m])
+        sift.append((theta,m))
     return sift
 
 

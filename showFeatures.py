@@ -15,7 +15,6 @@ def showFeatures(img,loc,D):
 
 
     for p in range(min(len(loc),len(D))):
-        print("p: "+str(p))
         r,c=loc[p]
         dr=D[p][0]
         if D[p][0]%2==0:
