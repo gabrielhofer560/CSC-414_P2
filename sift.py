@@ -65,7 +65,5 @@ def sift(img,feat):
     return sift
 
 
-"""
-find better way to map features to the corresponding descriptors
-"""
+
 

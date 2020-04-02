@@ -16,13 +16,22 @@ def naive(img0,img1,f0,f1):
             if img0[i:i+5,j:j+5]==img1[i:i+5,j:j+5]:
                 matches.append([i,j])
 
-def matchSIFT(img0,img1,f0,f1,d0,d1,theta_th,mag_th):
+"""
+Matches SIFT descriptors using two threshold values for comparing
+similar orientations and magnitudes
+:param f0 - feature/keypoint list
+:param f1 - feature/keypoint list
+:param d0 - descriptor list
+:param d1 - descriptor list
+:param theta_th - threshold for comparing orientation of descriptors
+:param mag_th - threshold for comparing magnitude of descriptors
+"""
+def matchSIFT(f0,f1,d0,d1,theta_th,mag_th):
     matches=[]
     for i in d0:
         for j in d1:
             if abs(i[0]-j[0])<=theta_th and abs(i[1]-j[1])<=mag_th 
             matches.append([i,j])
     return matches
-
 
 
