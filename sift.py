@@ -33,17 +33,21 @@ def makeH(W):
 
 """
 Sift Feature Desciptor
-makes HOG: Histogram of Oriented Gradients
 :param feat - list of interest points a.k.a. keypoints
 :returns 
 """
 def sift(img,feat):
+    print("shape of img: "+str(img.shape))
+
     sift=[]
+    tmp=[]
+    for f in feat:
+        if f[0]>8 and f[0]<img.shape[0]-8 and f[1]>8 and f[1]<img.shape[1]-8:
+            tmp.append(f)
+    feat=tmp
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4,2)) 
-        if r<9 or r>img.shape[0]-9 or c<8 or c>img.shape[1]-9:
-            continue
         for j in range(4):
             for k in range(4):
                 A[j,k]=makeH(gk(6,6,1)*img[r-9+(j*4):r-3+(j*4),c-9+(k*4):c-3+(k*4)])
