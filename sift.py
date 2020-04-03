@@ -38,13 +38,7 @@ Sift Feature Desciptor
 """
 def sift(img,feat):
     print("shape of img: "+str(img.shape))
-
     sift=[]
-    tmp=[]
-    for f in feat:
-        if f[0]>8 and f[0]<img.shape[0]-8 and f[1]>8 and f[1]<img.shape[1]-8:
-            tmp.append(f)
-    feat=tmp
     for i in feat:
         r,c=i[0],i[1]
         A=np.zeros((4,4,2)) 

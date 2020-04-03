@@ -22,7 +22,7 @@ gry = rgb2gray(img)
 print("gray shape: "+str(gry.shape))
 
 # get list of locations of interest points
-loc = harris(gry,gk(3,3,1),1)
+loc = harris(gry,gk(3,3,1),0.3)
 print("number of features: "+str(len(loc)))
 
 # make sift descriptors

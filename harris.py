@@ -40,7 +40,8 @@ def harris(img,g,th):
                 R = d/t
             avgR+=R
             if R>th: 
-                feat.append([i,j])
+                if i>10 and i<r-10 and j>10 and j<c-10:
+                    feat.append([i,j])
     avgR/=r*c
     print("average r: "+str(avgR))
     return feat
