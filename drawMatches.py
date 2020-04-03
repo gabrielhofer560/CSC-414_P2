@@ -4,7 +4,7 @@ draw lines showing feature matches
 import cv2
 import math
 import numpy as np
-from showDots import showDots 
+from showKeypoints import showKeypoints
 from skimage import io
 
 """
