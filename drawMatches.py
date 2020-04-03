@@ -16,7 +16,6 @@ source: https://en.wikipedia.org/wiki/Digital_differential_analyzer_(graphics_al
 :param c - color
 """
 def line1(img,one,two,c):
-    print("one: "+str(one)+" two: "+str(two))
     x0,y0=one
     x1,y1=two
     if y0==y1: return
@@ -51,7 +50,6 @@ def drawMatches(img0,kp0,img1,kp1,matches):
     img2[0:img1.shape[0],img0.shape[1]:img0.shape[1]+img1.shape[1]] = img1
     nkp1=[] # translate coordinate of right image
     for i in range(len(kp1)):
-        print("kp1[i][0]: "+str(kp1[i][0])+" kp1[i][1]: "+str(kp1[i][1]))
         nkp1.append([kp1[i][0],img0.shape[1]+kp1[i][1]])
     for [i,j] in matches:
         one,two = kp1[i], nkp1[j]

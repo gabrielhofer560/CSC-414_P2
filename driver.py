@@ -15,14 +15,15 @@ from showFeatures import showFeatures
 from sift import printH, makeH, sift
 
 # read image, convert to gray
-img = io.imread(sys.argv[1]);
+#img = io.imread(sys.argv[1]);
+img=io.imread("data/plane.bmp")
 cpy = img
 print("orig shape: "+str(img.shape))
 gry = rgb2gray(img)
 print("gray shape: "+str(gry.shape))
 
 # get list of locations of interest points
-loc = harris(gry,gk(3,3,1),0.3)
+loc = harris(gry,gk(3,3,1),0.25)
 print("number of features: "+str(len(loc)))
 
 # make sift descriptors
