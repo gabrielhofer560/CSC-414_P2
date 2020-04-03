@@ -19,9 +19,7 @@ Description - draws a blue line
 def line1(img,one,two,c):
     x0,y0=one
     x1,y1=two
-    print("hello 1")
     if y0==y1: return
-    print("hello 2")
     dx=x1-x0
     dy=y1-y0
     step=max(abs(dx),abs(dy))
