@@ -38,16 +38,8 @@ import cv2
 from drawMatches import drawMatches
 img2 = drawMatches(img,loc,img,loc,M)
 
-
 io.imshow( img2,vmin=0,vmax=255,cmap="gray")
 io.show()
-
-
-
-
-
-
-
 
 #io.imshow((img * 255).astype(np.uint8)  , vmin=0, vmax=255, cmap="gray")
 #io.show()
