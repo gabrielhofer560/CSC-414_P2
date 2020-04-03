@@ -26,9 +26,8 @@ def matchSIFT(d0,d1,theta_th,mag_th):
     matches=[]
     for idxi, i in enumerate(d0):
         for idxj, j in enumerate(d1):
-            if abs(i[0]-j[0])<=theta_th and abs(i[1]-j[1])<=mag_th:
+            if abs(i[0]-j[0])<theta_th and abs(i[1]-j[1])<mag_th:
                 matches.append([idxi,idxj])
     return matches
-
 
 
