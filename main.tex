@@ -25,8 +25,7 @@
 
        \vspace{0.5cm}
 
-        March 31, 2020
-
+       April 4, 2020
        \vfill
 
        Computer Science and Engineering\\
@@ -42,6 +41,9 @@ I implemented the Harris Corner Detection algorithm for feature extraction. \\
 
 \textbf{Step 2: Descriptors}\\
 
+I implemented a 
+\href{https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients}{Histogram of Oriented Gradients (HOG)}
+for the feature descriptor.
 For each Keypoint, K, we create a 16x16 window around centered at K.
 Then, we partition this 16x16 window into 16 4x4 sub-windows.
 For each 4x4 sub-window, we compute and apply a Laplacian filter to the image:
@@ -63,22 +65,22 @@ The orientation of the histogram is determined by the largest bin in the histogr
 Once a histogram has been made for each of the 16 4x4 subwindows, a histogram of 
 oriented gradients is made for the 16x16 window using the results from the 4x4 subwindows.
 Specifically, each 4x4 histogram acts like a single cell in the 16x16 window.
-the magnitude each 4x4 window is added to the appropriate bin in the histogram based
-on the orientation of the 4x4 window. 
-Once again, the orientation and mangitude of the 16x16 window is determined by the 
-largest bin in the histogram.
+The magnitude of each 4x4 window is added to the appropriate bin in the 16x16 histogram 
+based on the orientation of the 4x4 window. 
+Finally, the orientation and mangitude of the 16x16 window is determined by the 
+largest bin in the histogram. \\
 
 \textbf{Step 3: Feature Matching}\\
 
-My feature matching algorithm looks at all pairs of feature descriptors: $(d0,d1)$.
+My feature matching algorithm looks at all pairs of feature descriptors, $(d0,d1)$.
 
 A pair becomes a match if it meets two criteria:
 \begin{enumerate}
-    \item the difference of orientations between d0 and d1 is less than the threshold
-    \item the difference of magnitude between d0 and d1 is less than the threshold
+    \item the difference of orientations between d0 and d1 is less than the orientation threshold
+    \item the difference of magnitude between d0 and d1 is less than the magnitude threshold
 \end{enumerate}
 
-For drawing the matches between the two descriptors I used a 
+For drawing the matches between the two descriptors, I used a 
 \href{https://en.wikipedia.org/wiki/Digital_differential_analyzer_(graphics_algorithm)}{digital differential analyzer (DDA)} 
 algorithm.
 
