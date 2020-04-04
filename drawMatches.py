@@ -54,7 +54,7 @@ def drawMatches(img0,kp0,img1,kp1,matches):
     for [i,j] in matches:
         try:
             one,two = kp1[i], nkp1[j]
-            line1(img2,one,two,[0,0,255])
+            line1(img2,one,two,[255,0,0])
         except:
             None
     return img2

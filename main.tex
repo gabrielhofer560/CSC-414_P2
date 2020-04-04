@@ -45,26 +45,29 @@
 
 
 \textbf{Step 1: Feature Extraction}\\ 
-Harris Corner Detection
+
+\textbf{Step 2: Descriptors}\\
+
+For each Keypoint, K, we create a 16x16 window around centered at K.
+
+Then, we partition this 16x16 window into 16 4x4 sub-windows.
+
+For each 4x4 sub-window, we compute the Laplacian of the Image I
 
 
-
-Harris Matrix
-
-
-
-magnitude and orientation
+\[
+    L(x,y,\sigma) = G(x,y,\sigma) * I(x,y)
+\]
 \[
     m(x,y) = \sqrt{(L(x+1,y)-L(x-1,y))^2+(L(x,y+1)-L(x,y-1))^2}
 \]
 \[
     \theta (x,y) = \arctan{(L(x,y+1)-L(x,y-1))/(L(x+1,y)-L(x-1,y))}
 \]
-How to create bins:
 
-save images of showFeature -- and then put them here in the writeup
 
-\textbf{Step 2: Descriptors}\\
+
+
 
 \textbf{Step 3: Feature Matching}\\
 
